@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <title>Grand Hotelaria — Curitiba</title>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="site-header">
+    <div class="header-inner">
+        <div class="logo">
+            <img src="assets/image/logo.png" alt="Logo">
+        </div>
+        <nav class="nav-links">
+            <a href="#sobre">Sobre</a>
+            <a href="#comodidades">Comodidades</a>
+            <a href="#quartos">Quartos</a>
+            <a href="#galeria">Galeria</a>
+            <a href="#depoimentos">Avaliações</a>
+            <a href="#contato">Contato</a>
+        </nav>
+        <a href="#reserva" class="btn-reservar">Reservar</a>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </div>
+    <nav class="nav-mobile" id="nav-mobile">
+        <a href="#sobre">Sobre</a>
+        <a href="#comodidades">Comodidades</a>
+        <a href="#quartos">Quartos</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#depoimentos">Avaliações</a>
+        <a href="#contato">Contato</a>
+        <a href="#reserva" class="btn-reservar-mobile">Reservar Agora</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<main>
+    <div class="container hero-section">
+        <img src="assets/image/Gemini_Generated_Image_bdn19ubdn19ubdn1.png" alt="Hotel Grand Curitiba">
+        <div class="hero-overlay"></div>
+        <div class="mainInfo reveal">
+            <span class="hero-eyebrow"><i class="fa-solid fa-location-dot"></i> Curitiba, Paraná</span>
+            <h1>Transforme suas noites em<br>uma experiência memorável</h1>
+            <p class="hero-sub">Hospedagem de alto padrão no coração de Curitiba, com serviço personalizado e conforto que vai além do esperado.</p>
+            <div class="btn-group">
+                <a href="#reserva" class="btn-primary">Faça sua reserva</a>
+                <a href="#sobre" class="btn-secondary">Conheça o hotel</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- BARRA DE RESERVA RÁPIDA -->
+    <div class="reserva-bar" id="reserva">
+        <div class="reserva-inner">
+            <div class="reserva-field">
+                <label><i class="fa-regular fa-calendar"></i> Check-in</label>
+                <input type="date" id="checkin">
+            </div>
+            <div class="reserva-divider"></div>
+            <div class="reserva-field">
+                <label><i class="fa-regular fa-calendar"></i> Check-out</label>
+                <input type="date" id="checkout">
+            </div>
+            <div class="reserva-divider"></div>
+            <div class="reserva-field">
+                <label><i class="fa-solid fa-user"></i> Hóspedes</label>
+                <select id="hospedes">
+                    <option>1 hóspede</option>
+                    <option selected>2 hóspedes</option>
+                    <option>3 hóspedes</option>
+                    <option>4+ hóspedes</option>
+                </select>
+            </div>
+            <button class="btn-buscar">Verificar disponibilidade</button>
+        </div>
+    </div>
+</main>
+
+<!-- SOBRE -->
+<section class="sobre" id="sobre">
+    <div class="container-sobre">
+        <div class="content reveal">
+            <div class="esquerda">
+                <span class="section-eyebrow">Nosso hotel</span>
+                <h4>Um Pouco do<br>Nosso Hotel...</h4>
+                <p>Localizado no centro histórico de Curitiba, o Grand Hotel une arquitetura contemporânea e hospitalidade genuinamente paranaense. São mais de 20 anos oferecendo experiências que os hóspedes levam para sempre.</p>
+                <div class="carousel-controls">
+                    <button class="btn-nav" id="btn-prev"><i class="fa-solid fa-angle-left"></i></button>
+                    <button class="btn-nav" id="btn-next"><i class="fa-solid fa-angle-right"></i></button>
+                </div>
+            </div>
+            <div class="carousel-container direita">
+                <div class="carousel-track" id="hotel-track">
+                    <div class="carousel-card">
+                        <img src="assets/image/quarto.jpg" alt="Quarto">
+                        <div class="card-info">
+                            <span class="card-title">Quartos</span>
+                            <span class="card-subtitle">Ambientes projetados para o seu descanso</span>
+                        </div>
+                    </div>
+                    <div class="carousel-card">
+                        <img src="assets/image/piscina.jpg" alt="Piscina">
+                        <div class="card-info">
+                            <span class="card-title">Área de Lazer</span>
+                            <span class="card-subtitle">Piscina aquecida e espaços de relaxamento</span>
+                        </div>
+                    </div>
+                    <div class="carousel-card">
+                        <img src="assets/image/recepção.jpg" alt="Recepção">
+                        <div class="card-info">
+                            <span class="card-title">Recepção</span>
+                            <span class="card-subtitle">Atendimento 24h para o que precisar</span>
+                        </div>
+                    </div>
+                    <div class="carousel-card">
+                        <img src="assets/image/restaurante.avif" alt="Restaurante">
+                        <div class="card-info">
+                            <span class="card-title">Restaurante</span>
+                            <span class="card-subtitle">Culinária regional e internacional</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- COMODIDADES -->
+<section class="comodidades" id="comodidades">
+    <div class="section-header reveal">
+        <span class="section-eyebrow">O que oferecemos</span>
+        <h2>Tudo que você precisa,<br>em um só lugar</h2>
+    </div>
+    <div class="comodidades-grid reveal">
+        <div class="comodidade-item">
+            <div class="comodidade-icon"><i class="fa-solid fa-wifi"></i></div>
+            <h3>Wi-Fi Gratuito</h3>
+            <p>Internet de alta velocidade em todos os ambientes do hotel</p>
+        </div>
+        <div class="comodidade-item">
+            <div class="comodidade-icon"><i class="fa-solid fa-spa"></i></div>
+            <h3>Spa & Bem-estar</h3>
+            <p>Massagens, sauna e tratamentos exclusivos para relaxar</p>
+        </div>
+        <div class="comodidade-item">
+            <div class="comodidade-icon"><i class="fa-solid fa-dumbbell"></i></div>
+            <h3>Academia</h3>
+            <p>Equipamentos modernos disponíveis 24 horas por dia</p>
+        </div>
+        <div class="comodidade-item">
+            <div class="comodidade-icon"><i class="fa-solid fa-utensils"></i></div>
+            <h3>Restaurante</h3>
+            <p>Café da manhã incluso com café gourmet e opções regionais</p>
+        </div>
+        <div class="comodidade-item">
+            <div class="comodidade-icon"><i class="fa-solid fa-car"></i></div>
+            <h3>Transfer</h3>
+            <p>Serviço de transfer para aeroporto e pontos turísticos</p>
+        </div>
+        <div class="comodidade-item">
+            <div class="comodidade-icon"><i class="fa-solid fa-paw"></i></div>
+            <h3>Pet Friendly</h3>
+            <p>Aceitamos animais de estimação de até 10kg com carinho</p>
+        </div>
+        <div class="comodidade-item">
+            <div class="comodidade-icon"><i class="fa-solid fa-martini-glass"></i></div>
+            <h3>Bar Lounge</h3>
+            <p>Drinques autorais e petiscos até as 2h da manhã</p>
+        </div>
+        <div class="comodidade-item">
+            <div class="comodidade-icon"><i class="fa-solid fa-person-swimming"></i></div>
+            <h3>Piscina Aquecida</h3>
+            <p>Piscina coberta aquecida disponível o ano todo</p>
+        </div>
+    </div>
+</section>
+
+<!-- QUARTOS -->
+<section class="quartos" id="quartos">
+    <div class="section-header reveal">
+        <span class="section-eyebrow">Acomodações</span>
+        <h2>Escolha o seu quarto</h2>
+    </div>
+    <div class="quartos-grid reveal">
+        <div class="quarto-card">
+            <div class="quarto-img-wrap">
+                <img src="assets/image/quarto.jpg" alt="Quarto Standard">
+                <span class="quarto-badge">Mais escolhido</span>
+            </div>
+            <div class="quarto-info">
+                <div class="quarto-header">
+                    <h3>Standard</h3>
+                    <div class="quarto-preco">
+                        <span class="preco-valor">R$ 320</span>
+                        <span class="preco-label">/ noite</span>
+                    </div>
+                </div>
+                <ul class="quarto-features">
+                    <li><i class="fa-solid fa-check"></i> Cama queen size</li>
+                    <li><i class="fa-solid fa-check"></i> Ar-condicionado</li>
+                    <li><i class="fa-solid fa-check"></i> TV 42" Smart</li>
+                    <li><i class="fa-solid fa-check"></i> Café da manhã incluso</li>
+                </ul>
+                <a href="#reserva" class="btn-quarto">Reservar</a>
+            </div>
+        </div>
+        <div class="quarto-card destaque">
+            <div class="quarto-img-wrap">
+                <img src="assets/image/quarto.jpg" alt="Quarto Deluxe">
+                <span class="quarto-badge premium">Premium</span>
+            </div>
+            <div class="quarto-info">
+                <div class="quarto-header">
+                    <h3>Deluxe</h3>
+                    <div class="quarto-preco">
+                        <span class="preco-valor">R$ 520</span>
+                        <span class="preco-label">/ noite</span>
+                    </div>
+                </div>
+                <ul class="quarto-features">
+                    <li><i class="fa-solid fa-check"></i> Cama king size</li>
+                    <li><i class="fa-solid fa-check"></i> Banheira de hidromassagem</li>
+                    <li><i class="fa-solid fa-check"></i> Vista panorâmica da cidade</li>
+                    <li><i class="fa-solid fa-check"></i> Minibar completo</li>
+                </ul>
+                <a href="#reserva" class="btn-quarto">Reservar</a>
+            </div>
+        </div>
+        <div class="quarto-card">
+            <div class="quarto-img-wrap">
+                <img src="assets/image/quarto.jpg" alt="Suíte Master">
+            </div>
+            <div class="quarto-info">
+                <div class="quarto-header">
+                    <h3>Suíte Master</h3>
+                    <div class="quarto-preco">
+                        <span class="preco-valor">R$ 950</span>
+                        <span class="preco-label">/ noite</span>
+                    </div>
+                </div>
+                <ul class="quarto-features">
+                    <li><i class="fa-solid fa-check"></i> Sala de estar separada</li>
+                    <li><i class="fa-solid fa-check"></i> Cozinha equipada</li>
+                    <li><i class="fa-solid fa-check"></i> Acesso ao lounge exclusivo</li>
+                    <li><i class="fa-solid fa-check"></i> Concierge 24h dedicado</li>
+                </ul>
+                <a href="#reserva" class="btn-quarto">Reservar</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- GALERIA -->
+<section class="galeria" id="galeria">
+    <div class="section-header reveal">
+        <span class="section-eyebrow">Galeria</span>
+        <h2>Conheça nossos espaços</h2>
+    </div>
+    <div class="galeria-masonry reveal">
+        <div class="galeria-item tall">
+            <img src="assets/image/quarto.jpg" alt="Quarto">
+            <div class="galeria-overlay"><span>Quartos</span></div>
+        </div>
+        <div class="galeria-item">
+            <img src="assets/image/piscina.jpg" alt="Piscina">
+            <div class="galeria-overlay"><span>Piscina</span></div>
+        </div>
+        <div class="galeria-item">
+            <img src="assets/image/restaurante.avif" alt="Restaurante">
+            <div class="galeria-overlay"><span>Restaurante</span></div>
+        </div>
+        <div class="galeria-item tall">
+            <img src="assets/image/recepção.jpg" alt="Recepção">
+            <div class="galeria-overlay"><span>Recepção</span></div>
+        </div>
+        <div class="galeria-item">
+            <img src="assets/image/piscina.jpg" alt="Área de lazer">
+            <div class="galeria-overlay"><span>Área de Lazer</span></div>
+        </div>
+        <div class="galeria-item">
+            <img src="assets/image/quarto.jpg" alt="Suíte">
+            <div class="galeria-overlay"><span>Suítes</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="depoimentos" id="depoimentos">
+    <div class="section-header reveal">
+        <span class="section-eyebrow">Avaliações</span>
+        <h2>O que nossos hóspedes dizem</h2>
+    </div>
+    <div class="depoimentos-grid reveal">
+        <div class="depoimento-card">
+            <div class="estrelas">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <p>"A melhor experiência que já tive em um hotel no Brasil. O quarto era impecável, a equipe atenciosa e o café da manhã surpreendeu. Com certeza voltaremos."</p>
+            <div class="depoimento-autor">
+                <div class="autor-avatar">MC</div>
+                <div>
+                    <strong>Marina Costa</strong>
+                    <span>São Paulo, SP</span>
+                </div>
+            </div>
+        </div>
+        <div class="depoimento-card destaque">
+            <div class="estrelas">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <p>"Viemos para uma viagem de negócios e ficamos encantados. O transfer do aeroporto foi pontual, o Wi-Fi excelente e o spa foi um bônus incrível após os dias corridos."</p>
+            <div class="depoimento-autor">
+                <div class="autor-avatar">RF</div>
+                <div>
+                    <strong>Ricardo Ferreira</strong>
+                    <span>Rio de Janeiro, RJ</span>
+                </div>
+            </div>
+        </div>
+        <div class="depoimento-card">
+            <div class="estrelas">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+            <p>"Trouxemos nosso cachorrinho e fomos recebidos com um kit de boas-vindas para ele! Detalhe que fez toda a diferença. A área de lazer é linda e bem cuidada."</p>
+            <div class="depoimento-autor">
+                <div class="autor-avatar">AL</div>
+                <div>
+                    <strong>Ana Lima</strong>
+                    <span>Florianópolis, SC</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- LOCALIZAÇÃO -->
+<section class="localizacao" id="localizacao">
+    <div class="localizacao-inner">
+        <div class="localizacao-info reveal">
+            <span class="section-eyebrow">Como nos encontrar</span>
+            <h2>No coração de Curitiba</h2>
+            <p>A 5 minutos a pé do centro histórico e a 15 minutos do Aeroporto Afonso Pena.</p>
+            <ul class="pontos-proximos">
+                <li><i class="fa-solid fa-route"></i> <strong>5 min</strong> — Centro Histórico</li>
+                <li><i class="fa-solid fa-route"></i> <strong>8 min</strong> — Ópera de Arame</li>
+                <li><i class="fa-solid fa-route"></i> <strong>10 min</strong> — Jardim Botânico</li>
+                <li><i class="fa-solid fa-route"></i> <strong>15 min</strong> — Aeroporto Afonso Pena</li>
+                <li><i class="fa-solid fa-route"></i> <strong>20 min</strong> — Museu Oscar Niemeyer</li>
+            </ul>
+            <address>
+                <i class="fa-solid fa-location-dot"></i>
+                Rua das Flores, 1234 — Centro, Curitiba — PR
+            </address>
+        </div>
+        <div class="localizacao-mapa">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115288.09093522154!2d-49.38490544374999!3d-25.4372382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce415e9b3f0b3%3A0xc56e8c38b8a1d1c!2sCuritiba%2C%20PR!5e0!3m2!1spt-BR!2sbr!4v1700000000000"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" title="Localização do hotel">
+            </iframe>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+    <div class="section-header reveal">
+        <span class="section-eyebrow">Dúvidas frequentes</span>
+        <h2>Perguntas frequentes</h2>
+    </div>
+    <div class="faq-list reveal">
+        <div class="faq-item">
+            <button class="faq-pergunta" aria-expanded="false">
+                <span>Quais são os horários de check-in e check-out?</span>
+                <i class="fa-solid fa-plus faq-icon"></i>
+            </button>
+            <div class="faq-resposta">
+                <p>O check-in é a partir das 14h e o check-out até as 12h. Para early check-in ou late check-out, consulte nossa disponibilidade com antecedência — fazemos o possível para acomodar sem custo adicional.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-pergunta" aria-expanded="false">
+                <span>O café da manhã está incluso na diária?</span>
+                <i class="fa-solid fa-plus faq-icon"></i>
+            </button>
+            <div class="faq-resposta">
+                <p>Sim! O café da manhã buffet está incluso em todas as categorias de quarto. Servido das 6h30 às 10h30, com opções regionais, frios, frutas da estação e café gourmet.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-pergunta" aria-expanded="false">
+                <span>Qual é a política de cancelamento?</span>
+                <i class="fa-solid fa-plus faq-icon"></i>
+            </button>
+            <div class="faq-resposta">
+                <p>Cancelamentos feitos com até 48h de antecedência têm reembolso integral. Com menos de 48h, há cobrança de uma diária. Datas especiais seguem política específica informada no momento da reserva.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-pergunta" aria-expanded="false">
+                <span>O hotel aceita animais de estimação?</span>
+                <i class="fa-solid fa-plus faq-icon"></i>
+            </button>
+            <div class="faq-resposta">
+                <p>Sim, somos pet friendly! Aceitamos animais de até 10kg. Disponibilizamos cama, pote de água e petisco de boas-vindas. Informe no momento da reserva.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-pergunta" aria-expanded="false">
+                <span>Há estacionamento disponível?</span>
+                <i class="fa-solid fa-plus faq-icon"></i>
+            </button>
+            <div class="faq-resposta">
+                <p>Sim. Oferecemos estacionamento coberto com manobrista para hóspedes. A diária é de R$ 45 e pode ser adicionada à sua reserva.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTATO -->
+<section class="contato" id="contato">
+    <div class="contato-inner reveal">
+        <div class="contato-info">
+            <span class="section-eyebrow">Fale conosco</span>
+            <h2>Ainda tem dúvidas?</h2>
+            <p>Nossa equipe está disponível 24 horas para ajudar com sua reserva ou qualquer informação.</p>
+            <div class="contato-canais">
+                <a href="tel:+554133334444" class="canal">
+                    <i class="fa-solid fa-phone"></i>
+                    <div><strong>Telefone</strong><span>(41) 3333-4444</span></div>
+                </a>
+                <a href="mailto:contato@grandhotel.com.br" class="canal">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div><strong>E-mail</strong><span>contato@grandhotel.com.br</span></div>
+                </a>
+                <a href="https://wa.me/5541999998888" class="canal" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <div><strong>WhatsApp</strong><span>(41) 99999-8888</span></div>
+                </a>
+            </div>
+        </div>
+        <form class="contato-form" onsubmit="handleForm(event)">
+            <div class="form-row">
+                <div class="form-field">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" placeholder="Seu nome completo" required>
+                </div>
+                <div class="form-field">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="seu@email.com" required>
+                </div>
+            </div>
+            <div class="form-field">
+                <label for="assunto">Assunto</label>
+                <select id="assunto">
+                    <option>Reserva</option>
+                    <option>Evento corporativo</option>
+                    <option>Informações gerais</option>
+                    <option>Outros</option>
+                </select>
+            </div>
+            <div class="form-field">
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" rows="4" placeholder="Como podemos ajudar?" required></textarea>
+            </div>
+            <button type="submit" class="btn-enviar">Enviar mensagem <i class="fa-solid fa-arrow-right"></i></button>
+            <p class="form-success" id="form-success">✓ Mensagem enviada! Retornaremos em breve.</p>
+        </form>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <img src="assets/image/logo.png" alt="Logo">
+            <p>Hospitalidade genuína no coração de Curitiba desde 2003.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="TripAdvisor"><i class="fa-brands fa-tripadvisor"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="footer-links">
+            <h4>Navegação</h4>
+            <a href="#sobre">Sobre</a>
+            <a href="#comodidades">Comodidades</a>
+            <a href="#quartos">Quartos</a>
+            <a href="#galeria">Galeria</a>
+            <a href="#depoimentos">Avaliações</a>
+            <a href="#faq">FAQ</a>
+        </div>
+        <div class="footer-links">
+            <h4>Serviços</h4>
+            <a href="#">Eventos corporativos</a>
+            <a href="#">Casamentos</a>
+            <a href="#">Spa & Bem-estar</a>
+            <a href="#">Transfer</a>
+            <a href="#">Restaurante</a>
+        </div>
+        <div class="footer-contato">
+            <h4>Contato</h4>
+            <p><i class="fa-solid fa-location-dot"></i> Rua das Flores, 1234<br>Centro — Curitiba, PR</p>
+            <p><i class="fa-solid fa-phone"></i> (41) 3333-4444</p>
+            <p><i class="fa-solid fa-envelope"></i> contato@grandhotel.com.br</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2025 Grand Hotel Curitiba. Todos os direitos reservados.</p>
+        <p>Desenvolvido por <a href="https://hrdev.com.br/" target="_blank" class="hrdev">HR | DEV.</a></p>
+    </div>
+</footer>
+
+<script src="assets/js/carrossel.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
