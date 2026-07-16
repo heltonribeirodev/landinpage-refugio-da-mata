@@ -113,3 +113,89 @@ if (checkin && checkout) {
     checkout.min = today;
     checkin.addEventListener('change', () => { checkout.min = checkin.value; });
 }
+
+// ════════════════════════════════════════════
+//  LIGHTBOX — Refúgio da Mata
+//  Adicione quantas fotos quiser em `fotos[]`
+// ════════════════════════════════════════════
+const fotos = [
+    { src: 'assets/image/Hidro + vista.jpeg', label: 'Vista das Montanhas' },
+    { src: 'assets/image/quarto.jpeg',         label: 'Quarto' },
+    { src: 'assets/image/hidro.jpeg',          label: 'Hidromassagem' },
+    { src: 'assets/image/cozinha.jpeg',        label: 'Cozinha' },
+    { src: 'assets/image/quarto2.jpeg',        label: 'Suíte' },
+    { src: 'assets/image/cozinha2.jpeg',       label: 'Cozinha — detalhe' },
+    // ↓ adicione mais fotos aqui:
+    // { src: 'assets/image/NOME.jpeg', label: 'Legenda' },
+];
+
+let indiceAtual = 0;
+
+function abrirLightbox(index) {
+    indiceAtual = index;
+    const lb = document.getElementById('lightbox');
+    lb.classList.add('ativo');
+    document.body.style.overflow = 'hidden';
+    renderizarThumbs();
+    atualizarFoto();
+}
+
+function fecharLightbox() {
+    document.getElementById('lightbox').classList.remove('ativo');
+    document.body.style.overflow = '';
+}
+
+function fecharLightboxFora(e) {
+    if (e.target.id === 'lightbox') fecharLightbox();
+}
+
+function navegarLightbox(dir) {
+    indiceAtual = (indiceAtual + dir + fotos.length) % fotos.length;
+    atualizarFoto();
+}
+
+function atualizarFoto() {
+    const foto = fotos[indiceAtual];
+    const img  = document.getElementById('lb-img');
+    img.style.opacity = 0;
+    setTimeout(() => {
+        img.src = foto.src;
+        img.alt = foto.label;
+        img.style.opacity = 1;
+    }, 150);
+    document.getElementById('lb-label').textContent   = foto.label;
+    document.getElementById('lb-counter').textContent = `${indiceAtual + 1} / ${fotos.length}`;
+    // miniatura ativa + scroll automático
+    document.querySelectorAll('.lb-thumb').forEach((t, i) => {
+        const ativo = i === indiceAtual;
+        t.classList.toggle('ativo', ativo);
+        if (ativo) t.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    });
+}
+
+function renderizarThumbs() {
+    const container = document.getElementById('lb-thumbs');
+    container.innerHTML = '';
+    fotos.forEach((f, i) => {
+        const div = document.createElement('div');
+        div.className = 'lb-thumb' + (i === indiceAtual ? ' ativo' : '');
+        div.onclick = () => { indiceAtual = i; atualizarFoto(); };
+        const img = document.createElement('img');
+        img.src = f.src;
+        img.alt = f.label;
+        div.appendChild(img);
+        container.appendChild(div);
+    });
+}
+
+// Teclado
+document.addEventListener('keydown', (e) => {
+    const lb = document.getElementById('lightbox');
+    if (!lb.classList.contains('ativo')) return;
+    if (e.key === 'ArrowRight') navegarLightbox(1);
+    if (e.key === 'ArrowLeft')  navegarLightbox(-1);
+    if (e.key === 'Escape')     fecharLightbox();
+});
+
+
+
