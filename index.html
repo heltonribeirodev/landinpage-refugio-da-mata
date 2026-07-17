@@ -19,10 +19,15 @@
             <a href="#sobre">Sobre</a>
             <a href="#comodidades">Comodidades</a>
             <a href="#quartos">Quartos</a>
+            <a href="#disponibilidade">Disponibilidade</a>
             <a href="#galeria">Galeria</a>
             <a href="#depoimentos">Avaliações</a>
         </nav>
-        <a href="#reserva" class="btn-reservar">Reservar</a>
+        <a href="https://wa.me/5541999636554?text=Olá!%20Gostaria%20de%20fazer%20uma%20reserva%20no%20Refúgio%20da%20Mata."
+           class="btn-reservar btn-reservar-wpp"
+           target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp"></i> Reservar
+        </a>
         <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
             <i class="fa-solid fa-bars"></i>
         </button>
@@ -31,9 +36,14 @@
         <a href="#sobre">Sobre</a>
         <a href="#comodidades">Comodidades</a>
         <a href="#quartos">Quartos</a>
+        <a href="#disponibilidade">Disponibilidade</a>
         <a href="#galeria">Galeria</a>
         <a href="#depoimentos">Avaliações</a>
-        <a href="#reserva" class="btn-reservar-mobile">Reservar Agora</a>
+        <a href="https://wa.me/5541999636554?text=Olá!%20Gostaria%20de%20fazer%20uma%20reserva%20no%20Refúgio%20da%20Mata."
+           class="btn-reservar-mobile"
+           target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp"></i> Reservar pelo WhatsApp
+        </a>
     </nav>
 </header>
 
@@ -427,6 +437,59 @@
         <div class="localizacao-mapa">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.290792724217!2d-48.86482572385674!3d-25.46196373415861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dc87976e188e67%3A0xcd397cd7a5b64c7d!2sRef%C3%BAgio%20da%20Mata!5e0!3m2!1spt-BR!2sbr!4v1782387546921!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
         </div>
+    </div>
+</section>
+
+<!-- DISPONIBILIDADE -->
+<section class="disponibilidade" id="disponibilidade">
+    <div class="section-header reveal">
+        <span class="section-eyebrow">Calendário</span>
+        <h2>Verifique a disponibilidade</h2>
+    </div>
+    <div class="cal-wrapper reveal">
+
+        <div class="cal-demo-badge" id="cal-demo-badge" style="display:none;">
+            <i class="fa-solid fa-circle-info"></i>
+            Modo demonstração — datas simuladas. Sincronize com Airbnb/Booking para dados reais.
+        </div>
+
+        <div class="cal-loading" id="cal-loading">
+            <i class="fa-solid fa-circle-notch"></i>
+            Carregando disponibilidade...
+        </div>
+
+        <div class="cal-nav" id="cal-nav" style="display:none;">
+            <button class="cal-btn" id="cal-prev" title="Mês anterior">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <div class="cal-meses" id="cal-meses"></div>
+            <button class="cal-btn" id="cal-next" title="Próximo mês">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <div class="cal-legenda" id="cal-legenda" style="display:none;">
+            <div class="cal-legenda-item">
+                <div class="cal-legenda-cor disponivel"></div>
+                <span>Disponível</span>
+            </div>
+            <div class="cal-legenda-item">
+                <div class="cal-legenda-cor ocupado"></div>
+                <span>Indisponível</span>
+            </div>
+            <div class="cal-legenda-item">
+                <div class="cal-legenda-cor hoje"></div>
+                <span>Hoje</span>
+            </div>
+        </div>
+
+        <div class="cal-cta" id="cal-cta" style="display:none;">
+            <a href="https://wa.me/5541999636554" class="btn-whatsapp" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> Reservar pelo WhatsApp
+            </a>
+            <a href="#reserva" class="btn-primary">Verificar preços</a>
+        </div>
+
     </div>
 </section>
 
