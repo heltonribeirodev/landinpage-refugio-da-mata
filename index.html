@@ -23,7 +23,7 @@
             <a href="#galeria">Galeria</a>
             <a href="#depoimentos">Avaliações</a>
         </nav>
-        <a href="https://wa.me/5541999636554?text=Olá!%20Gostaria%20de%20fazer%20uma%20reserva%20no%20Refúgio%20da%20Mata."
+        <a href="https://wa.me/5541996366554?text=Olá!%20Gostaria%20de%20fazer%20uma%20reserva%20no%20Refúgio%20da%20Mata."
            class="btn-reservar btn-reservar-wpp"
            target="_blank" rel="noopener">
             <i class="fa-brands fa-whatsapp"></i> Reservar
@@ -39,7 +39,7 @@
         <a href="#disponibilidade">Disponibilidade</a>
         <a href="#galeria">Galeria</a>
         <a href="#depoimentos">Avaliações</a>
-        <a href="https://wa.me/5541999636554?text=Olá!%20Gostaria%20de%20fazer%20uma%20reserva%20no%20Refúgio%20da%20Mata."
+        <a href="https://wa.me/5541996366554?text=Olá!%20Gostaria%20de%20fazer%20uma%20reserva%20no%20Refúgio%20da%20Mata."
            class="btn-reservar-mobile"
            target="_blank" rel="noopener">
             <i class="fa-brands fa-whatsapp"></i> Reservar pelo WhatsApp
@@ -84,7 +84,9 @@
                     <option>4+ hóspedes</option>
                 </select>
             </div>
-            <button class="btn-buscar">Verificar disponibilidade</button>
+            <button class="btn-buscar" id="btn-buscar" onclick="reservarViaWpp()">
+                <i class="fa-brands fa-whatsapp"></i> Reservar pelo WhatsApp
+            </button>
         </div>
     </div>
 </main>
@@ -317,11 +319,19 @@
                     <span class="preco-label-hero">/ noite</span>
                 </div>
                 <div class="quarto-ctas">
-                    <a href="https://www.airbnb.com.br/rooms/972709284832576013?check_in=2023-09-05&check_out=2023-09-10&guests=1&adults=2&s=67&unique_share_id=c1840328-d16a-418e-9ed3-21746e31fc6f&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGn3qE1woHZ_EURtu_9jTnatONiK42caueSVqRgcD1f9mxOadCfnO92-8m9S7g_aem_F-AJdXKeAZ2RbCuAWtrfyQ&source_impression_id=p3_1782338308_P3Rz5TfcDslO7X50" class="btn-primary airbnb" target="_blank"><i class="fa-brands fa-airbnb"></i></a>
-                    <a href="https://www.booking.com/hotel/br/pousada-refugio-da-mata.html?label=gen173rf-10CAsoIEIXcG91c2FkYS1yZWZ1Z2lvLWRhLW1hdGFIM1gDaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGYAjeoAgG4AqGF9NEGwAIB0gIkMDBiZGI3MGEtM2FhNy00OWQyLWFmNjEtZDM2MDZlODkzYzIy2AIB4AIB&sid=faff4933adb17d7b45dc4121aab0ce68&aid=304142&ucfs=1&arphpl=1&checkin=2026-06-28&checkout=2026-06-29" class="btn-primary booking" target="_blank"><i class="fa-solid fa-b"></i></a>
-                    <a href="https://wa.me/5541999998888" class="btn-whatsapp" target="_blank">
-                        <i class="fa-brands fa-whatsapp"></i> Falar direto com proprietario
+                    <a href="https://wa.me/5541996366554?text=Olá!%20Gostaria%20de%20reservar%20o%20Refúgio%20da%20Mata.%20Podem%20me%20informar%20a%20disponibilidade%3F"
+                       class="btn-whatsapp btn-whatsapp-lg" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-whatsapp"></i> Reservar pelo WhatsApp
                     </a>
+                    <div class="quarto-ctas-secundarios">
+                        <span>Ou reserve em:</span>
+                        <a href="https://www.airbnb.com.br/rooms/972709284832576013" class="link-plataforma airbnb" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-airbnb"></i> Airbnb
+                        </a>
+                        <a href="https://www.booking.com/hotel/br/pousada-refugio-da-mata.html" class="link-plataforma booking" target="_blank" rel="noopener">
+                            <i class="fa-solid fa-bed"></i> Booking
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -484,10 +494,10 @@
         </div>
 
         <div class="cal-cta" id="cal-cta" style="display:none;">
-            <a href="https://wa.me/5541999636554" class="btn-whatsapp" target="_blank">
-                <i class="fa-brands fa-whatsapp"></i> Reservar pelo WhatsApp
+            <a href="https://wa.me/5541996366554?text=Olá!%20Vi%20a%20disponibilidade%20no%20site%20e%20gostaria%20de%20reservar%20o%20Refúgio%20da%20Mata."
+               class="btn-whatsapp btn-whatsapp-lg" target="_blank" rel="noopener">
+                <i class="fa-brands fa-whatsapp"></i> Consultar disponibilidade pelo WhatsApp
             </a>
-            <a href="#reserva" class="btn-primary">Verificar preços</a>
         </div>
 
     </div>
@@ -546,9 +556,9 @@
             <img src="assets/image/Logo/refugio da mata white.png" alt="Logo">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis.</p>
             <div class="social-links">
-                <a href="https://www.instagram.com/pousadarefugiodamata/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.facebook.com/p/Pousada-Refúgio-da-Mata-100090381504339/" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#" aria-label="whatsapp"><i class="fa-brands fa-whatsapp"></i></i></a>
+                <a href="https://www.instagram.com/pousadarefugiodamata/" aria-label="Instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/p/Pousada-Refúgio-da-Mata-100090381504339/" aria-label="Facebook" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://wa.me/5541996366554?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Refúgio%20da%20Mata." aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
         </div>
         <div class="footer-links">
@@ -571,7 +581,12 @@
         <div class="footer-contato">
             <h4>Contato</h4>
             <p><i class="fa-solid fa-location-dot"></i> Rua dos Curios 25.461980,-48.862307, Estr. da Ponte Alta, Morretes - PR</p>
-            <p><i class="fa-solid fa-phone"></i> (41) 99636-6554</p>
+            <p>
+                <a href="https://wa.me/5541996366554?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Refúgio%20da%20Mata."
+                   target="_blank" rel="noopener" class="footer-tel-wpp">
+                    <i class="fa-brands fa-whatsapp"></i> (41) 9 9636-6554
+                </a>
+            </p>
             <p><i class="fa-solid fa-envelope"></i> gisellipnascimento@hotmail.com</p>
         </div>
     </div>
@@ -601,20 +616,6 @@
     </button>
     <div class="lb-thumbs" id="lb-thumbs"></div>
 </div>
-
-
-<!-- BOTÃO FIXO WHATSAPP -->
-<a href="https://wa.me/5541999636554?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20disponibilidade%20do%20Refúgio%20da%20Mata."
-   class="whatsapp-fixo"
-   id="whatsapp-fixo"
-   target="_blank"
-   rel="noopener"
-   aria-label="Falar no WhatsApp">
-    <span class="whatsapp-fixo-icone">
-        <i class="fa-brands fa-whatsapp"></i>
-    </span>
-    <span class="whatsapp-fixo-label">Fale conosco</span>
-</a>
 
 <script src="assets/js/script.js"></script>
 

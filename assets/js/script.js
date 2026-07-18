@@ -37,6 +37,27 @@
         checarWpp();
     }
 
+    // ── Barra de reserva → WhatsApp com datas preenchidas ──
+    function reservarViaWpp() {
+        const checkin  = document.getElementById('checkin')?.value;
+        const checkout = document.getElementById('checkout')?.value;
+        const hospedes = document.getElementById('hospedes')?.value || '2 hóspedes';
+
+        let msg = 'Olá! Gostaria de reservar o Refúgio da Mata.';
+
+        if (checkin && checkout) {
+            const fmtData = (s) => {
+                const [y, m, d] = s.split('-');
+                return `${d}/${m}/${y}`;
+            };
+            msg = `Olá! Gostaria de reservar o Refúgio da Mata.\n\n📅 Check-in: ${fmtData(checkin)}\n📅 Check-out: ${fmtData(checkout)}\n👥 Hóspedes: ${hospedes}\n\nPodem confirmar a disponibilidade?`;
+        } else if (checkin) {
+            msg = `Olá! Gostaria de reservar o Refúgio da Mata a partir de ${checkin.split('-').reverse().join('/')}. Podem me informar a disponibilidade?`;
+        }
+
+        window.open('https://wa.me/5541996366554?text=' + encodeURIComponent(msg), '_blank');
+    }
+
     // ── Mobile menu ──
     const menuToggle = document.getElementById('menu-toggle');
     const navMobile  = document.getElementById('nav-mobile');
@@ -317,7 +338,9 @@
                         celula.className = 'cal-dia disponivel';
                         celula.title = 'Disponível — clique para reservar';
                         celula.addEventListener('click', () => {
-                            window.location.href = '#reserva';
+                            const dataFmt = `${String(d).padStart(2,'0')}/${String(data.getMonth()+1).padStart(2,'0')}/${data.getFullYear()}`;
+                            const msg = `Olá! Vi que o dia ${dataFmt} está disponível no Refúgio da Mata. Gostaria de fazer uma reserva!`;
+                            window.open('https://wa.me/5541996366554?text=' + encodeURIComponent(msg), '_blank');
                         });
                     }
 

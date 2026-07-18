@@ -1,22 +1,10 @@
 <?php
-/**
- * ical-proxy.php — Refúgio da Mata
- * Lê os calendários iCal do Airbnb e Booking.com
- * e retorna as datas ocupadas em JSON para o site.
- *
- * COMO USAR:
- * 1. Substitua as URLs abaixo pelos seus links iCal reais
- * 2. Faça upload deste arquivo na raiz do seu site na Hostinger
- * 3. Acesse: seusite.com.br/ical-proxy.php para testar
- */
 
 header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: *');
 header('Cache-Control: public, max-age=3600'); // cache de 1h
 
-// ══════════════════════════════════════════
-//  SUBSTITUA AQUI pelos seus links iCal reais
-// ══════════════════════════════════════════
+
 $calendarios = [
     'airbnb'  => 'https://www.airbnb.com.br/calendar/ical/SEU_ID.ics?s=SEU_TOKEN',
     'booking' => 'https://ical.booking.com/v1/export?t=SEU_TOKEN',
@@ -25,13 +13,11 @@ $calendarios = [
 // ── Datas de demonstração (remova quando tiver os links reais) ──
 $demo_ocupadas = gerarDatasDemo();
 
-// ── Busca e processa os calendários ──
 $datas_ocupadas = [];
 $fontes_ativas  = [];
 $erros          = [];
 
 foreach ($calendarios as $fonte => $url) {
-    // Pula URLs de demonstração
     if (strpos($url, 'SEU_') !== false) {
         continue;
     }
@@ -52,7 +38,6 @@ foreach ($calendarios as $fonte => $url) {
 $datas_ocupadas = array_values(array_unique($datas_ocupadas));
 sort($datas_ocupadas);
 
-// Se não há fontes reais, usa demo
 $modo_demo = empty($fontes_ativas);
 if ($modo_demo) {
     $datas_ocupadas = $demo_ocupadas;
