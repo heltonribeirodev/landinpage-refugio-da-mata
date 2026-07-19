@@ -1560,9 +1560,10 @@ LIGHTBOX
 .pontos-proximos li {
     font-size: 0.88rem;
     color: var(--clr-text);
-    display: flex;
-    align-items: center;
-    gap: 0.7rem;
+    display: grid;
+    grid-template-columns: 16px 40px 1fr;
+    align-items: baseline;
+    gap: 0 0.5rem;
 }
 
 .pontos-proximos li i {
@@ -1572,6 +1573,7 @@ LIGHTBOX
 
 .pontos-proximos li strong {
     color: var(--clr-dark);
+    white-space: nowrap;
 }
 
 address {
@@ -3046,4 +3048,4 @@ RESPONSIVE — mobile-first breakpoints
     .cal-painel-divider {
         display: none; /* Esconde a barra em telas pequenas */
     }
-}
+}   
