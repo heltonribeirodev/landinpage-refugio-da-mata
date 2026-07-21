@@ -224,6 +224,17 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape')     fecharLightbox();
 });
 
+// ── Swipe touch no lightbox (mobile) ──
+(function () {
+    let touchStartX = 0;
+    const lb = document.getElementById('lightbox');
+    lb.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; }, { passive: true });
+    lb.addEventListener('touchend',   (e) => {
+        const diff = touchStartX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 50) navegarLightbox(diff > 0 ? 1 : -1);
+    }, { passive: true });
+})();
+
 // ════════════════════════════════════════════════════════
 //  CALENDÁRIO DE DISPONIBILIDADE
 //  · Seleção de intervalo check-in / check-out
